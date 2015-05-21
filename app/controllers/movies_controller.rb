@@ -10,7 +10,7 @@ class MoviesController < ApplicationController
             flash[:success] = "Movie Saved!"
             redirect_to new_movie_path
         else
-            flash[:error] = "Uh oh, Q. Fill out all the fields"
+            flash[:danger] = "Uh oh, Q. Fill out all the fields"
             redirect_to new_movie_path
         end
         
