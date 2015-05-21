@@ -29,6 +29,10 @@ class MoviesController < ApplicationController
         end
     end
     
+    def index
+        @movies = Movie.all
+    end
+    
     private
         def movie_params
             params.require(:movie).permit(:title, :format, :length, :release_year, :rating)
