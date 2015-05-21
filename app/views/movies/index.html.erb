@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="well">
+        <table id="myTable" class="tablesorter">
+            <thead>
+            <tr>
+                <th>Title</th>
+                <th>Format</th>
+                <th>Movie Length</th>
+                <th>Year Released</th>
+                <th>Rating</th>
+            </tr>
+            </thead>
+            <tbody>
+                <% @movies.each do |movie| %>    
+                    <tr>
+                        <td><%= movie.title %></td>   
+                    </tr>
+                <% end %>
+            </tbody>
+        </table>
+    </div>
+</div>
+
