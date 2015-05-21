@@ -7,9 +7,11 @@ class MoviesController < ApplicationController
         @movie = Movie.new(movie_params)
         
         if @movie.save
-            redirect_to new_movie_path, notice: "Movie Saved!"
+            flash[:success] = "Movie Saved!"
+            redirect_to new_movie_path
         else
-            redirect_to new_movie_path, notice: "Error occurred"
+            flash[:error] = "Uh oh, Q. Fill out all the fields"
+            redirect_to new_movie_path
         end
         
     end
@@ -23,8 +25,10 @@ class MoviesController < ApplicationController
     end
     
     def update
+        @movie = Movie.find(params[:id])
         if @movie.update(movie_params)
-            redirect_to @movie, notice: 'Your movie was successfully updated.'
+            flash[:success] = 'Good work, Q! Movie successfully updated.'
+            redirect_to @movie
         else
             render :edit
         end
@@ -32,6 +36,12 @@ class MoviesController < ApplicationController
     
     def index
         @movies = Movie.all
+    end
+    
+    def destroy
+        @movie = Movie.find(params[:id])
+        @movie.destroy
+        redirect_to :action => 'index'
     end
     
     private

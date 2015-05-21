@@ -16,7 +16,16 @@
     <div class="collapse navbar-collapse" id="main-nav-collapse">
 
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Index", movies_path %> </li>
+        <li>
+          <%= link_to new_movie_path do %>
+            <i class="fa fa-glass"></i> Add New Movie
+          <% end %>
+        </li>
+        <li>
+          <%= link_to movies_path do %>
+            <i class="fa fa-file-text-o"></i> Index
+          <% end %>
+        </li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div>
