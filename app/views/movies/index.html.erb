@@ -17,6 +17,7 @@
                         <td><%= movie.length %></td>
                         <td><%= movie.release_year %></td>
                         <td><%= movie.rating %></td>
+                        <td><%= link_to 'Show', movie_path(movie) %></td>
                     </tr>
                 <% end %>
         </table>

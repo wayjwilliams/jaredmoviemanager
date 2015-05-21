@@ -1,0 +1,10 @@
+<div class="row">
+  <div class="col-md-offset-2 col-md-8">
+        <%= @movie.title %>
+        <%= @movie.format %>
+  </div>
+            <%= link_to edit_movie_path(@movie) do %>
+            <span class="glyphicon glyphicon-edit"></span>
+            Edit
+          <% end %>
+</div>
