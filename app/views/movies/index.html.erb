@@ -10,14 +10,22 @@
                 <th>Rating</th>
             </tr>
             </thead>
-            <tbody>
                 <% @movies.each do |movie| %>    
                     <tr>
-                        <td><%= movie.title %></td>   
+                        <td><%= movie.title %></td> 
+                        <td><%= movie.format %></td>
+                        <td><%= movie.length %></td>
+                        <td><%= movie.release_year %></td>
+                        <td><%= movie.rating %></td>
                     </tr>
                 <% end %>
-            </tbody>
         </table>
     </div>
 </div>
+<script type="text/javascript">
+  $(document).ready(function()
+  {
+    $("#myTable").tablesorter();
+  });
+</script>
 
