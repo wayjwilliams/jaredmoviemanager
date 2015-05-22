@@ -1,7 +1,7 @@
 class MoviesController < ApplicationController
     before_action :set_movie, only: [:show, :edit, :update, :destroy]
     before_action :authenticate_user!, except: [:index, :show]
-    before_action :only_current_user, only: [:edit, :update, :destroy]
+    before_action :correct_user, only: [:edit, :update, :destroy]
     
     def new
         @movie = current_user.movies.build
