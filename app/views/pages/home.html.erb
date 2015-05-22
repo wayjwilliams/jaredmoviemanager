@@ -4,4 +4,25 @@
       <h2>Collecting and Rating 007's Filmed History</h2>
     </div>
 </div>
+<% if user_signed_in? %>
+  <div class="col-md-8 col md-offset-4">
+    <div class="well">
+      <h2>Welcome Back, Agent. Load up some movies!</h2>
+    </div>
+  </div>
+<% else %>
+  <div class="col-md-6">
+    <div class="well">
+      <h3 class="text-center">Welcome Back. Log in</h3><br />
+      <%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>
+    </div>
+  </div>
+    <div class="col-md-6">
+      <div class="well">
+      <h3 class="text-center">Welcome Back. Log in</h3><br />
+        <%= link_to "Sign up", new_user_registration_path, class: "btn btn-success btn-lg" %>
+      </div>
+    </div>
+<% end %>  
+
 

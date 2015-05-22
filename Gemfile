@@ -43,3 +43,4 @@ gem 'rails_12factor', group: :production
 gem 'pg', group: :production
 gem 'jquery-tablesorter'
 gem 'jquery-ui-rails'
+gem 'devise', '~> 3.4.1'
