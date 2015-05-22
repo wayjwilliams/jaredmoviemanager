@@ -1,10 +1,14 @@
 class MoviesController < ApplicationController
+    before_action :set_movie, only: [:show, :edit, :update, :destroy]
+    before_action :authenticate_user!, except: [:index, :show]
+    before_action :only_current_user, only: [:edit, :update, :destroy]
+    
     def new
-        @movie = Movie.new
+        @movie = current_user.movies.build
     end
     
     def create
-        @movie = Movie.new(movie_params)
+        @movie = current_user.movies.build(movie_params)
         
         if @movie.save
             flash[:success] = "Movie Saved!"
@@ -45,6 +49,14 @@ class MoviesController < ApplicationController
     end
     
     private
+        def set_movie
+            @movie = Movie.find_by(id: params[:id])
+        end
+        
+        def correct_user
+            @movie = current_user.movies.find_by(id: params[:id])
+        end
+        
         def movie_params
             params.require(:movie).permit(:title, :format, :length, :release_year, :rating)
         end

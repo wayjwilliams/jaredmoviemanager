@@ -8,10 +8,12 @@
         <strong>Movie Length: </strong><%= @movie.length %><br />
         <strong>Released in: </strong><%= @movie.release_year %><br />
         <strong>My Rating: </strong><%= @movie.rating %><br />
-    
-  <%= link_to "Update this Movie", edit_movie_path(@movie), class: 'btn btn-default' %>
-  <%= button_to "Delete", movie_path(@movie), :data => { :confirm => "Are you sure?" }, :method => :delete, class: "btn btn-danger" %>
-  
+        
+        <% if @movie.user == current_user %>  
+          <%= link_to "Update this Movie", edit_movie_path(@movie), class: 'btn btn-default' %>
+          <%= button_to "Delete", movie_path(@movie), :data => { :confirm => "Are you sure?" }, :method => :delete, class: "btn btn-danger" %>
+        <% end %>
+        
       </div>    
     </div>
   </div>

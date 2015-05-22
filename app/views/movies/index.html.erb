@@ -23,6 +23,9 @@
                 <% end %>
             </table>
         </div>
+            <% if user_signed_in? %>
+              <%= link_to 'New Movie', new_movie_path, class: "btn btn-success" %>
+            <% end %>
     </div>
 </div>
 <script type="text/javascript">
