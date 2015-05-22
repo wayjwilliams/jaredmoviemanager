@@ -5,4 +5,6 @@ class Movie < ActiveRecord::Base
     maximum: 50,
     }
     validates :length, :release_year, :rating, numericality: true
+    
+    belongs_to :user
 end

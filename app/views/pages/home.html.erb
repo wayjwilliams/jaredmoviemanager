@@ -1,11 +1,14 @@
-<div class="carousel">
-  <a href="/movies"><img src="http://static.comicvine.com/uploads/original/7/73958/3169624-5685380-navnet-er-bond-james-bond---1.jpg" class="img-responsive" alt="Bond James Bond"></a>
-    <div class="carousel-caption">
-      <h2>Collecting and Rating 007's Filmed History</h2>
-    </div>
-</div>
+<div class="container"> 
+  <div class="carousel">
+    <a href="/movies"><img src="http://static.comicvine.com/uploads/original/7/73958/3169624-5685380-navnet-er-bond-james-bond---1.jpg" class="img-responsive" alt="Bond James Bond"></a>
+      <div class="carousel-caption">
+        <h2>Collecting and Rating 007's Filmed History</h2>
+      </div>
+  </div>
+
+
 <% if user_signed_in? %>
-  <div class="col-md-8 col md-offset-4">
+  <div class="col-md-10 col md-offset-2">
     <div class="well">
       <h2>Welcome Back, Agent. Load up some movies!</h2>
     </div>
@@ -14,13 +17,13 @@
   <div class="col-md-6">
     <div class="well">
       <h3 class="text-center">Welcome Back. Log in</h3><br />
-      <%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>
+      <%= link_to "Log in", new_user_session_path, class: "btn btn-primary btn-lg btn-block" %>
     </div>
   </div>
     <div class="col-md-6">
       <div class="well">
       <h3 class="text-center">Welcome Back. Log in</h3><br />
-        <%= link_to "Sign up", new_user_registration_path, class: "btn btn-success btn-lg" %>
+        <%= link_to "Sign up", new_user_registration_path, class: "btn btn-success btn-lg btn-block" %>
       </div>
     </div>
 <% end %>  
