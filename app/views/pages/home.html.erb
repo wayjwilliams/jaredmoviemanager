@@ -12,18 +12,16 @@
     <h2 class="text-center">Welcome Back, Agent. Load up some movies!</h2>
   </div>
 <% else %>
-  <div class="col-md-6">
-    <div class="well">
-      <h3 class="text-center">Welcome Back. Log in</h3><br />
-      <%= link_to "Log in", new_user_session_path, class: "btn btn-primary btn-lg btn-block" %>
-    </div>
+<div class="container-fluid">
+  <div class="col-md-3 col-md-offset-3">
+      <h3 class="text-center">Welcome Back!</h3><br />
+      <%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-block" %>
   </div>
-    <div class="col-md-6">
-      <div class="well">
-      <h3 class="text-center">Hello! Sign up!</h3><br />
-        <%= link_to "Sign up", new_user_registration_path, class: "btn btn-success btn-lg btn-block" %>
-      </div>
-    </div>
+  <div class="col-md-3">
+    <h3 class="text-center">Hello New Agent!</h3><br />
+      <%= link_to "Sign up", new_user_registration_path, class: "btn btn-default btn-block" %>
+  </div>
+</div>  
 <% end %>  
 
 
