@@ -7,7 +7,14 @@
         <strong>Movie Format: </strong><%= @movie.format %><br />
         <strong>Movie Length: </strong><%= @movie.length %><br />
         <strong>Released in: </strong><%= @movie.release_year %><br />
-        <strong>My Rating: </strong><%= @movie.rating %><br />
+        <strong>My Rating: </strong><%= @movie.rating %>
+          <% if @movie.rating == 1 %> Walther PPK
+            <% elsif @movie.rating == 2 %> Oddjob Flying Hats
+            <% elsif @movie.rating == 3 %> Shoe Phones
+            <% elsif @movie.rating == 4 %> Laser Rolexes
+            <% else %> Golden Guns
+            <% end %>
+        <br />
         
         <% if @movie.user == current_user %>  
           <%= link_to "Update this Movie", edit_movie_path(@movie), class: 'btn btn-default' %>
