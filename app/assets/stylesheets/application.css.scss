@@ -11,9 +11,15 @@
         //uigradients
 }
 
-.navbar-static-bottom {
+.navbar-fixed-bottom {
   margin-top: 20px;
+  i.fa-twitter-square{color:#95a5a6;}
+  i.fa-facebook-square{color:#95a5a6;}
+  i.fa-github-square{color:#95a5a6;}
+  i.fa-envelope-square{color:#95a5a6;}
+  i:hover{color:white;}
 }
+
 
 .btn-default {
     color: white;
