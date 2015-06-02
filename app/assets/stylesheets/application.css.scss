@@ -2,6 +2,20 @@
 @import "bootstrap";
 @import "jquery-ui";
 
+html,
+body {
+  height: 100%;
+}
+
+.container-body {
+  min-height: 100%;
+  height: auto;
+  /* Negative indent footer by its height */
+  margin: 0 auto -60px;
+  /* Pad bottom by footer height */
+  padding: 0 0 60px;
+}
+
 .navbar {
   background: -webkit-linear-gradient(90deg, #232526 10%, #414345 90%); /* Chrome 10+, Saf5.1+ */
   background:    -moz-linear-gradient(90deg, #232526 10%, #414345 90%); /* FF3.6+ */
@@ -12,7 +26,6 @@
 }
 
 .navbar-fixed-bottom {
-  margin-top: 20px;
   i.fa-twitter-square{color:#95a5a6;}
   i.fa-facebook-square{color:#95a5a6;}
   i.fa-github-square{color:#95a5a6;}

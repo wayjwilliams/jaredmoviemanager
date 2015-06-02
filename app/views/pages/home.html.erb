@@ -1,28 +1,25 @@
-<div class="container"> 
-  <div class="carousel">
-    <a href="/movies"><img src="http://static.comicvine.com/uploads/original/7/73958/3169624-5685380-navnet-er-bond-james-bond---1.jpg" class="img-responsive" alt="Bond James Bond"></a>
-      <div class="carousel-caption">
-        <h2>Collecting and Rating 007's Filmed History</h2>
-      </div>
-  </div>
-
-
+<div class="container">
+<div class="row">
+  <a href="/movies"><img src="http://static.comicvine.com/uploads/original/7/73958/3169624-5685380-navnet-er-bond-james-bond---1.jpg" class="img-responsive" alt="Bond James Bond"></a>
 <% if user_signed_in? %>
-  <div class="col-md-10 col md-offset-2">
-    <h2 class="text-center">Welcome Back, Agent. Load up some movies!</h2>
+  <div class="text-center">
+    <h2>Welcome Back, Agent. Load up some movies!</h2>
   </div>
+</div>
 <% else %>
-<div class="container-fluid">
-  <div class="col-md-3 col-md-offset-3">
-      <h3 class="text-center">Welcome Back!</h3><br />
-      <%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-block" %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 col-md-offset-3">
+        <h3 class="text-center">Welcome Back!</h3><br />
+        <%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-block" %>
+    </div>
+    <div class="col-md-3">
+      <h3 class="text-center">Hello New Agent!</h3><br />
+        <%= link_to "Sign up", new_user_registration_path, class: "btn btn-default btn-block" %>
+    </div>
+  </div>  
+  <% end %>
   </div>
-  <div class="col-md-3">
-    <h3 class="text-center">Hello New Agent!</h3><br />
-      <%= link_to "Sign up", new_user_registration_path, class: "btn btn-default btn-block" %>
-  </div>
-</div>  
-<% end %>
 </div>
 
 
