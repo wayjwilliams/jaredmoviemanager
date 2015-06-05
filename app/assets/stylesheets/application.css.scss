@@ -22,16 +22,18 @@ body {
   background:     -ms-linear-gradient(90deg, #232526 10%, #414345 90%); /* IE10 */
   background:      -o-linear-gradient(90deg, #232526 10%, #414345 90%); /* Opera 11.10+ */
   background:         linear-gradient(90deg, #232526 10%, #414345 90%); /* W3C */
-        //uigradients
+        /* uigradients.com brings teh awesome */
 }
 
-.navbar-fixed-bottom {
-  i.fa-twitter-square{color:#95a5a6;}
-  i.fa-facebook-square{color:#95a5a6;}
-  i.fa-github-square{color:#95a5a6;}
-  i.fa-envelope-square{color:#95a5a6;}
-  i:hover{color:white;}
-}
+.fa-twitter-square{color:#95a5a6;}
+.fa-facebook-square{color:#95a5a6;}
+.fa-github-square{color:#95a5a6;}
+.fa-envelope-square{color:#95a5a6;}
+
+.fa-twitter-square:hover{color:white;}
+.fa-facebook-square:hover{color:white;}
+.fa-github-square:hover{color:white;}
+.fa-envelope-square:hover{color:white;}
 
 
 .btn-default {
@@ -41,5 +43,4 @@ body {
   background:     -ms-linear-gradient(90deg, #232526 10%, #414345 90%); /* IE10 */
   background:      -o-linear-gradient(90deg, #232526 10%, #414345 90%); /* Opera 11.10+ */
   background:         linear-gradient(90deg, #232526 10%, #414345 90%); /* W3C */
-        //uigradients
 }
