@@ -3,7 +3,35 @@
     <h1 class="text-center">Fix It!</h1>
     <p class="text-center">Uh Oh. Misspelled a Title? Rethinking that rating? Fix it!</p>
     <div class="well">
-      <%= render 'form' %>
+      <%= form_for @movie do |f| %>
+        <div class="form-group">
+          <%= f.label :title %>
+          <%= f.text_field :title,input_html: {maxlength: 50}, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :format %>
+          <%= f.select :format, ['VHS', 'DVD', 'Streaming'], {}, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :length, "Movie Length (in minutes)" %>
+          <%= f.number_field :length, min: 1, max: 499, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :release_year, "Year Released" %>
+          <%= f.number_field :release_year, min: 1801, max: 2099, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :rating %>
+          <%= f.radio_button :rating, 1 %> 1 Walther PPK
+          <%= f.radio_button :rating, 2 %> 2 Oddjob Flying Hats
+          <%= f.radio_button :rating, 3 %> 3 Shoe Phones
+          <%= f.radio_button :rating, 4 %> 4 Laser Rolexes
+          <%= f.radio_button :rating, 5 %> 5 Golden Guns
+        </div>
+        <div class="form-group text-center">
+          <%= f.submit "Update Your Movie", class: 'btn btn-lg btn-success' %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
