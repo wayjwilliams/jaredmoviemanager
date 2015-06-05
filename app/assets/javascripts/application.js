@@ -21,6 +21,21 @@
 $(document).ready(function() {
     $("body").css("display", "none");
  
+    $("body").fadeIn(750);
+ 
+    $("a:not(.target)").click(function(event){
+        event.preventDefault();
+        linkLocation = this.href;
+        $("body").fadeOut(750, redirectPage);      
+    });
+         
+    function redirectPage() {
+        window.location = linkLocation;
+    }
+});
+$(document).ready(function() {
+    $("body").css("display", "none");
+ 
     $("body").fadeIn(250);
  
     $("a:not(.target)").click(function(event){
