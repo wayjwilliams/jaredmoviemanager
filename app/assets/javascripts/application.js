@@ -17,3 +17,19 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function() {
+    $("body").css("display", "none");
+ 
+    $("body").fadeIn(250);
+ 
+    $("a:not(.target)").click(function(event){
+        event.preventDefault();
+        linkLocation = this.href;
+        $("body").fadeOut(500, redirectPage);      
+    });
+         
+    function redirectPage() {
+        window.location = linkLocation;
+    }
+});

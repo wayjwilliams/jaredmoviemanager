@@ -2,7 +2,14 @@
 @import "bootstrap";
 @import "jquery-ui";
 
-html,
+html {
+  height: 100%;
+  background: -webkit-linear-gradient(90deg, #232526 10%, #414345 90%); /* Chrome 10+, Saf5.1+ */
+  background:    -moz-linear-gradient(90deg, #232526 10%, #414345 90%); /* FF3.6+ */
+  background:     -ms-linear-gradient(90deg, #232526 10%, #414345 90%); /* IE10 */
+  background:      -o-linear-gradient(90deg, #232526 10%, #414345 90%); /* Opera 11.10+ */
+  background:         linear-gradient(90deg, #232526 10%, #414345 90%); /* W3C */
+}
 body {
   height: 100%;
 }
@@ -43,4 +50,8 @@ body {
   background:     -ms-linear-gradient(90deg, #232526 10%, #414345 90%); /* IE10 */
   background:      -o-linear-gradient(90deg, #232526 10%, #414345 90%); /* Opera 11.10+ */
   background:         linear-gradient(90deg, #232526 10%, #414345 90%); /* W3C */
+}
+
+.target {
+  
 }
